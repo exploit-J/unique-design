@@ -80,6 +80,9 @@ nav li a{
   width: 100vw;
   height: 91vh;
   overflow: hidden;
+  background-image: url(assets/images/bg-gray.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .first .home .bg{
