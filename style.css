@@ -22,11 +22,22 @@ button{
 
 /*** Header ***/
 header{
+  height: 50px;
+}
+
+.header-inner{
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
   height: 50px;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 1;
 }
 
 header .logo a{
@@ -36,12 +47,14 @@ header .logo a{
 
 header .side-menu-button{
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 15px;
   font-size: 18px;
 }
 
 nav{
+  position: absolute;
+  top: 50px;
   width: 100%;
   transform: translateY(-600px);
   background-color: skyblue;
@@ -74,32 +87,29 @@ nav li a{
 }
 
 /*** main***/
-
+main{
+  padding: 0 10px;
+}
 .first .home{
   position: relative;
-  width: 100vw;
   height: 91vh;
   overflow: hidden;
   background-image: url(assets/images/bg-gray.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.first .home .bg{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 .first .home .logo{
   position: absolute;
   top: 40%;
-  width: 100vw;
+}
+
+.section-title{
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .about .about-img{
-  width: 100vw;
-  /* overflow: hidden; */
+  margin-bottom: 20px;
 }
 
 .about .about-img img{
@@ -108,6 +118,7 @@ nav li a{
 
 .about .about-desc-headimg{
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .about .about-desc-headimg img{
@@ -116,20 +127,57 @@ nav li a{
 
 .about .about-desc-footimg{
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .about .about-desc-footimg img{
   width: 100%;
 }
 
-.about .about-desc h1{
+.about .about-desc h2{
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .about .about-desc p{
   font-size: 16px;
+  margin-bottom: 5px;
 }
 
+.overview dl{
+  position: relative;
+}
+
+.overview dl::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/overview01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+}
+
+.overview .list-item{
+  margin-bottom: 10px;
+}
+
+.overview .list-item dd{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.overview .list-item.webhard span{
+  font-weight: bold;
+}
+
+.asdf{
+  width: 100%;
+  margin-bottom: 10px;
+}
 @media screen and (min-width:768px){
   header{
     flex-direction: row;
@@ -153,6 +201,17 @@ nav li a{
   nav ul{
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .about{
+    display: flex;
+  }
+
+  .about .about-img{
+    flex-basis: 50%;
+  }
+  .about .about-desc{
+    flex-basis: 50%;
   }
 }
 
