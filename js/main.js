@@ -1,9 +1,6 @@
 const sideMenuButton = document.querySelector('.side-menu-button')
 const sideMenu = document.querySelector('nav')
-const closeMenuButton = document.querySelector('.close-button')
+const overlay = document.querySelector('.overlay')
 
-sideMenuButton.addEventListener('click', () => 
-  sideMenu.classList.add('is-active'))
-
-  closeMenuButton.addEventListener('click', () =>
-  sideMenu.classList.remove('is-active'))
+sideMenuButton.addEventListener('click', () =>
+  sideMenu.classList.toggle('is-active'))

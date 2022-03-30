@@ -23,53 +23,151 @@ button{
 /*** Header ***/
 header{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 50px;
-  padding: 0 15px;
 }
 
-.logo img{
-  width: 150px;
+header .logo a{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header .side-menu-button{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
 }
 
 nav{
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 100%;
+  transform: translateY(-600px);
   background-color: skyblue;
-  width: 250px;
-  height: 100vh;
-  transform: translatex(250px);
   text-transform: capitalize;
   transition: 0.5s;
+  z-index: 999;
 }
 
 nav.is-active{
-  transform: translatex(0);
-}
-
-nav .close-button{
-  position: absolute;
-  top: 2vh;
-  right: 2vh;
+  transform: translateY(0);
 }
 
 nav ul{
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
-nav ul li{
-  width: 100%;
-  padding: 1em;
+nav li{
   text-align: center;
 }
 
-nav ul li a{
-  display: block;
-  /* width: 100%; */
-  padding: 0.5em;
+nav li:hover{
+  opacity: 0.5;
 }
+
+nav li a{
+  display: block;
+  padding: 6px;
+}
+
+/*** main***/
+
+.first .home{
+  position: relative;
+  width: 100vw;
+  height: 91vh;
+  overflow: hidden;
+}
+
+.first .home .bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.first .home .logo{
+  position: absolute;
+  top: 40%;
+  width: 100vw;
+}
+
+.about .about-img{
+  width: 100vw;
+  /* overflow: hidden; */
+}
+
+.about .about-img img{
+  width: 100%;
+}
+
+.about .about-desc-headimg{
+  width: 100%;
+}
+
+.about .about-desc-headimg img{
+  width: 100%;
+}
+
+.about .about-desc-footimg{
+  width: 100%;
+}
+
+.about .about-desc-footimg img{
+  width: 100%;
+}
+
+.about .about-desc h1{
+  font-size: 18px;
+}
+
+.about .about-desc p{
+  font-size: 16px;
+}
+
+@media screen and (min-width:768px){
+  header{
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  header .logo{
+    margin: 10px;
+  }
+
+  header .side-menu-button{
+    display: none;
+  }
+
+  nav{
+    width: 60%;
+    transform: translateY(0)
+  }
+
+  nav ul{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* .overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(148, 144, 144, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: 10;
+}
+
+.overlay.is-active{
+  opacity: 1;
+  visibility: visible;
+} */
+
