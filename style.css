@@ -70,7 +70,7 @@ nav.is-active{
 nav ul{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
 }
 
 nav li{
@@ -90,7 +90,7 @@ nav li a{
 main{
   padding: 0 10px;
 }
-.first .home{
+.top .home{
   position: relative;
   height: 91vh;
   overflow: hidden;
@@ -98,7 +98,7 @@ main{
   background-repeat: no-repeat;
   background-size: cover;
 }
-.first .home .logo{
+.top .home .logo{
   position: absolute;
   top: 40%;
 }
@@ -116,12 +116,12 @@ main{
   width: 100%;
 }
 
-.about .about-desc-headimg{
+.about .about-desc-img{
   width: 100%;
   margin-bottom: 10px;
 }
 
-.about .about-desc-headimg img{
+.about .about-desc-img img{
   width: 100%;
 }
 
@@ -137,11 +137,13 @@ main{
 .about .about-desc h2{
   font-size: 18px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .about .about-desc p{
   font-size: 16px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .overview dl{
@@ -174,10 +176,94 @@ main{
   font-weight: bold;
 }
 
-.asdf{
-  width: 100%;
-  margin-bottom: 10px;
+.contact ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.contact ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact li img{
+  width: 60px;
+  height: 60px;
+}
+
+footer{
+  padding: 0 10px;
+}
+
+footer .head-wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+footer .head-wrap .co-info{
+  display: none;
+}
+
+footer .co-info .address span{
+  font-weight: bold;
+}
+
+footer .co-info .contact{
+  display: flex;
+}
+
+footer .co-info .contact dl{
+  width: 100%;
+}
+
+footer .co-info .contact .desc{
+  display: flex;
+  justify-content: center;
+}
+
+footer .co-info .contact .desc dt{
+  font-weight: bold;
+}
+
+footer .sns ul{
+  display: flex;
+  justify-content: center;
+}
+
+footer .sns ul li{
+}
+
+footer .sns ul li a{
+  display: block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+footer .sns ul li a:last-child{
+  margin-right: 0;
+}
+
+footer .footimg{
+  width: 100%;
+}
+
+/* .contact::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/bg-blue.png);
+  background-repeat: no-repeat;
+  
+} */
+
+
 @media screen and (min-width:768px){
   header{
     flex-direction: row;
@@ -212,6 +298,10 @@ main{
   }
   .about .about-desc{
     flex-basis: 50%;
+  }
+
+  footer .head-wrap .co-info{
+    display: flex;
   }
 }
 
