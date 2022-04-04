@@ -26,20 +26,15 @@ button{
 
 /*** Header ***/
 header{
-  /* position: relative; */
   height: 50px;
-}
-
-header .logo{
-  position: absolute;
-  left: 10px;
-  width: 100%;
+  padding: 0 10px;
 }
 
 header .logo button{
-  width: 170px;
+  width: 180px;
   font-size: 24px;
   font-weight: bold;
+  text-align: left;
   transition: 0.5s;
 }
 
@@ -69,6 +64,7 @@ header .side-menu-button:hover{
   align-items: flex-start;
   width: 100%;
   height: 50px;
+  padding: 0 10px;
   background-color: #fff;
   z-index: 1;
 }
@@ -147,6 +143,10 @@ section:last-child{
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+
+.top .logo .white{
+  display: none;
 }
 
 .about .about-img{
@@ -327,14 +327,15 @@ footer span{
 }
 
 @media screen and (min-width:768px){
-  header{
+  /*** Header ***/
+  .header-inner{
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
   }
 
   header .logo{
-    margin: 10px;
+    position: static;
   }
 
   header .side-menu-button{
@@ -342,24 +343,89 @@ footer span{
   }
 
   nav{
-    width: 60%;
-    transform: translateY(0)
+    position: static;
+    width: 50%;
+    transform: translateY(0);
   }
 
   nav ul{
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+  }
+
+  nav ul li{
+    margin-right: 20px;
+  }
+
+  nav ul li:last-child{
+    margin-right: 0;
+  }
+
+  /*** Main  ***/
+
+  .top{
+    height: 95vh;
+  }
+
+  .top .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/images/bg-blue.png);
+  }
+
+  .top .logo img{
+    left: 10%;
+    top: 40%;
+    max-width: 50%;
+  }
+  
+  .top .logo .white{
+    display: block;
+  }
+
+  .top .logo .black{
+    display: none;
   }
 
   .about{
+  }
+
+  .about-contents{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .about .about-img{
-    flex-basis: 50%;
+    margin-right: 20px;
+    max-width: 30%;
+    margin-bottom: 0;
   }
   .about .about-desc{
     flex-basis: 50%;
+    flex-grow: 2;
+    height: 100%;
+
+  }
+
+  .about .about-desc h2{
+    text-align: left;
+  }
+
+  .about .about-desc p{
+    text-align: left;
+  }
+
+  .about .about-desc-img{
+    width: 400px;
+    margin-bottom: 20px;
+    flex-grow: 2;
+  }
+
+  .about .about-desc-footimg{
+    width: 400px;
   }
 
   footer .head-wrap .co-info{
