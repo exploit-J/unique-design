@@ -212,7 +212,8 @@ section:last-child{
 }
 
 .process img{
-  padding: 0  50px;
+  transform: translateX(50%);
+  width: 50%;
 }
 
 .partners img{
