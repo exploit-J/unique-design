@@ -18,6 +18,7 @@ a{
 }
 
 button{
+  color: black;
   background: none;
   border: none;
   cursor: pointer;
@@ -65,10 +66,9 @@ header .side-menu-button{
 nav{
   position: absolute;
   top: 50px;
-  /* left: 0; */
   width: 100%;
   transform: translateY(-600px);
-  background-color: skyblue;
+  background-color: #fff;
   transition: 0.5s;
   z-index: 999;
 }
