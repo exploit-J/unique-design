@@ -5,17 +5,16 @@ const overlay = document.querySelector('.overlay')
 sideMenuButton.addEventListener('click', () =>
   sideMenu.classList.toggle('is-active'))
 
+
+// menu 클릭 시 스크롤 이동
 const moveButton = document.querySelectorAll('.nav-button')
 const topHeight = 50
 
-function clicked(){
+function moveScroll(){
   const sectionId = this.getAttribute('id')
   const toSection = document.querySelector(`.${sectionId}`)
-  console.log(sectionId);
-  console.log(toSection);
 
   const scrollAmount = toSection.offsetTop - topHeight
-  console.log(scrollAmount)
 
   window.scrollTo({
     top : scrollAmount,
@@ -26,5 +25,15 @@ function clicked(){
 }
 
 moveButton.forEach((button) => {
-  button.addEventListener('click', clicked)
+  button.addEventListener('click', moveScroll)
 })
+
+// home버튼 클릭 시 최상단으로 이동
+const homeButton = document.querySelector('header .logo button')
+
+homeButton.addEventListener('click', () =>
+  window.scrollTo({
+    top : 0, 
+    behavior : 'smooth'
+  })
+)

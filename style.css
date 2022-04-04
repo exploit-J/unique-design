@@ -36,10 +36,15 @@ header .logo{
   width: 100%;
 }
 
-header .logo a{
-  display: block;
+header .logo button{
+  width: 170px;
   font-size: 24px;
   font-weight: bold;
+  transition: 0.5s;
+}
+
+header .logo button:hover{
+  opacity: 0.5;
 }
 
 header .side-menu-button{
@@ -47,6 +52,11 @@ header .side-menu-button{
   top: 18px;
   right: 12px;
   font-size: 18px;
+  transition: 0.5s;
+}
+
+header .side-menu-button:hover{
+  opacity: 0.5;
 }
 
 .header-inner{
