@@ -120,6 +120,7 @@ section:last-child{
 .top .home{
   position: relative;
   height: 91vh;
+  max-height: 91vh;
   overflow: hidden;
   background-image: url(assets/images/bg-gray.png);
   background-repeat: no-repeat;
