@@ -132,6 +132,7 @@ section:last-child{
   background-image: url(assets/images/bg-gray.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed
   overflow: hidden;
 }
 .top .home .logo{
