@@ -124,6 +124,7 @@ section:last-child{
 
 .top .bg{
   position: relative;
+  display: flex;
 }
 
 .top .bg .bg-img{
