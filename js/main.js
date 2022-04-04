@@ -31,9 +31,10 @@ moveButton.forEach((button) => {
 // home버튼 클릭 시 최상단으로 이동
 const homeButton = document.querySelector('header .logo button')
 
-homeButton.addEventListener('click', () =>
+homeButton.addEventListener('click', () => {
   window.scrollTo({
     top : 0, 
     behavior : 'smooth'
   })
-)
+  sideMenu.classList.remove('is-active')
+})
