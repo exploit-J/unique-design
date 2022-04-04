@@ -122,7 +122,26 @@ section:last-child{
   height: 100vh;
 }
 
-.top .bg{
+.top .logo{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/bg-gray.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top .logo img{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+
+
+/* .top .bg{
   position: relative;
   display: flex;
 }
@@ -144,7 +163,7 @@ section:last-child{
   width: 100%;
   padding: 0 10px;
   transform: translateY(-50%);
-}
+} */
 
 /* .top .home{
   position: relative;
@@ -154,7 +173,6 @@ section:last-child{
   background-image: url(assets/images/bg-gray.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed
 }
 
 .top .home .logo{
