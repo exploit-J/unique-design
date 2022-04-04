@@ -1,7 +1,9 @@
+/*** Reset ***/
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 ul,
@@ -11,6 +13,7 @@ li{
 }
 
 a{
+  color: black;
   text-decoration: none;
 }
 
@@ -22,22 +25,13 @@ button{
 
 /*** Header ***/
 header{
+  /* position: relative; */
   height: 50px;
 }
 
-.header-inner{
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  background-color: #fff;
-  z-index: 1;
+header .logo{
+  position: absolute;
+  left: 10px;
 }
 
 header .logo a{
@@ -47,14 +41,29 @@ header .logo a{
 
 header .side-menu-button{
   position: absolute;
-  top: 20px;
-  right: 15px;
+  top: 18px;
+  right: 12px;
   font-size: 18px;
+}
+
+.header-inner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  z-index: 1;
 }
 
 nav{
   position: absolute;
   top: 50px;
+  /* left: 0; */
   width: 100%;
   transform: translateY(-600px);
   background-color: skyblue;
@@ -90,6 +99,23 @@ nav li a{
 main{
   padding: 0 10px;
 }
+
+section{
+  margin-bottom: 40px;
+}
+
+section:last-child{
+  margin-bottom: 20px;
+}
+
+.section-title{
+  display: inline-block;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  border-radius: 4px;
+}
+
 .top .home{
   position: relative;
   height: 91vh;
@@ -101,24 +127,23 @@ main{
 .top .home .logo{
   position: absolute;
   top: 40%;
-}
-
-.section-title{
-  margin-bottom: 10px;
-  text-align: center;
+  padding: 10px;
 }
 
 .about .about-img{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .about .about-img img{
   width: 100%;
+  padding: 10px;
 }
 
 .about .about-desc-img{
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .about .about-desc-img img{
@@ -136,35 +161,32 @@ main{
 
 .about .about-desc h2{
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .about .about-desc p{
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
   text-align: center;
+  letter-spacing: -0.06px;
+  line-height: 24px;
+}
+
+.about .about-desc p span{
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .overview dl{
-  position: relative;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.overview dl::after{
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image: url(assets/images/overview01.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.4;
-}
 
 .overview .list-item{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .overview .list-item dd{
@@ -176,10 +198,23 @@ main{
   font-weight: bold;
 }
 
+.process{
+  width: 100%;
+}
+
+.process img{
+  padding: 0  50px;
+}
+
+.partners img{
+  width: 100%;
+}
+
 .contact ul{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .contact ul li{
@@ -231,9 +266,16 @@ footer .co-info .contact .desc dt{
 footer .sns ul{
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 footer .sns ul li{
+  margin-right: 15px;
+  transition: 0.5s;
+}
+
+footer .sns ul li:hover{
+  opacity: 0.5;
 }
 
 footer .sns ul li a{
@@ -249,20 +291,20 @@ footer .sns ul li a:last-child{
 
 footer .footimg{
   width: 100%;
+  margin-bottom: 10px;
 }
 
-/* .contact::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(assets/images/bg-blue.png);
-  background-repeat: no-repeat;
-  
-} */
+footer span{
+  display: block;
+  margin-bottom: 10px;
+}
 
+
+@media screen and (max-width:767px) {
+  .about .about-desc p br{
+    display: none;
+  } 
+}
 
 @media screen and (min-width:768px){
   header{
@@ -304,22 +346,3 @@ footer .footimg{
     display: flex;
   }
 }
-
-/* .overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(148, 144, 144, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 300ms ease-in-out;
-  z-index: 10;
-}
-
-.overlay.is-active{
-  opacity: 1;
-  visibility: visible;
-} */
-
