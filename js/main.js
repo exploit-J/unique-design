@@ -37,4 +37,17 @@ homeButton.addEventListener('click', () => {
     behavior : 'smooth'
   })
   sideMenu.classList.remove('is-active')
+  underline.classList.remove('is-active')
 })
+
+// 밑줄 효과
+const underline = document.querySelector('.underline')
+function underlineEffect(e){
+  underline.classList.add('is-active')
+  underline.style.left = e.currentTarget.offsetLeft + 'px';
+  underline.style.width = e.currentTarget.offsetWidth + 'px';
+  underline.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight - 3 + 'px';
+}
+
+moveButton.forEach(button => button.addEventListener('click', (e) => underlineEffect(e)))
+
