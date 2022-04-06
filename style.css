@@ -128,7 +128,7 @@ section:last-child{
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(assets/images/bg-gray.png);
+  background-image: url(assets/images/index/bg-gray.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -460,7 +460,7 @@ footer span{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(assets/images/bg-blue.png);
+    background-image: url(assets/images/index/bg-blue.png);
   }
 
   .top .logo img{
