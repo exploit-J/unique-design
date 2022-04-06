@@ -461,6 +461,7 @@ footer span{
   }
 
   .top .logo{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -468,9 +469,10 @@ footer span{
   }
 
   .top .logo img{
+    position: absolute;
     left: 10%;
     top: 40%;
-    max-width: 50%;
+    width: 35%;
   }
   
   .top .logo .white{
