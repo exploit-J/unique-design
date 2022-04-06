@@ -145,7 +145,7 @@ section:last-child{
 
 .top .logo .black{
   padding: 0 1em;
-  max-width: 90%;
+  width: 100%;
 }
 
 .top .logo .white{
