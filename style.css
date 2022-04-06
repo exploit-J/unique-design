@@ -1,28 +1,4 @@
-/*** Reset ***/
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
-ul,
-ol,
-li{
-  list-style: none;  
-}
-
-a{
-  color: black;
-  text-decoration: none;
-}
-
-button{
-  color: black;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+@import url(css/reset.css);
 
 /*** Header ***/
 header{
@@ -108,13 +84,13 @@ section{
 }
 
 section:last-child{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .section-title{
   display: inline-block;
   padding: 0 5px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   background-color: #ebebeb;
   border-radius: 4px;
 }
@@ -137,10 +113,6 @@ section:last-child{
 
 .top .logo img{
   display: block;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 0; */
-  /* transform: translateY(-50%); */
 }
 
 .top .logo .black{
@@ -155,7 +127,7 @@ section:last-child{
 .about .about-img{
   margin-bottom: 40px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
 }
 
 .about .about-img img{
@@ -229,7 +201,7 @@ section:last-child{
   width: 100%;
 }
 
-.process img{
+.process .ver{
   transform: translateX(50%);
   width: 50%;
 }
@@ -249,14 +221,14 @@ section:last-child{
 .contact ul{
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .contact ul li{
   display: flex;
   align-items: center;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
@@ -265,8 +237,8 @@ section:last-child{
 }
 
 .contact li img{
-  width: 45px;
-  height: 45px;
+  width: 24px;
+  height: 24px;
   margin-right: 20px;
 }
 
@@ -307,7 +279,7 @@ footer .co-info .contact .desc dt{
 footer .sns ul{
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 footer .sns ul li{
@@ -334,15 +306,20 @@ footer .sns ul li a:last-child{
   margin-right: 0;
 }
 
+footer .sns ul li a img{
+  width: 18px;
+  height: 18px;
+}
+
 footer .footimg{
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 footer span{
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 50px;
+  font-size: 0.7rem;
   letter-spacing: -0.05rem;
   text-align: center;
 }
@@ -491,21 +468,27 @@ footer span{
   }
 
   .about .about-img{
-    margin-right: 40px;
-    max-width: 500px;
-    min-width: 350px;
+    margin-right: 100px;
+    max-width: 750px;
+    min-width: 450px;
     margin-bottom: 0;
   }
   
+  .about .about-desc{
+    margin-left: 100px;
+  }
+
   .about .about-desc h2{
     text-align: left;
     font-size: 2rem;
+    margin-bottom: 50px;
   }
   
   .about .about-desc p{
     text-align: left;
     font-size: 1.25rem;
     line-height: 2rem;
+    margin-bottom: 50px;
   }
 
   .about .about-desc p span{
@@ -513,8 +496,13 @@ footer span{
   }
 
   .about .about-desc-img{
+    display: block;
     max-width: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
+  }
+
+  .about .about-desc-img img{
+    width: 100%;
   }
 
   .about .about-desc-footimg{
@@ -531,12 +519,12 @@ footer span{
     display: flex;
     justify-content: flex-end;
     flex: 1 1;
-    margin-right: 20px;
+    margin-right: 100px;
   }
   
   .overview .overview-img img{
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .overview dl{
@@ -546,6 +534,7 @@ footer span{
     justify-content: space-evenly;
     box-shadow: none;
     font-size: 1.25rem;
+    margin-left: 100px;
   }
 
   .overview dl div{
@@ -567,7 +556,6 @@ footer span{
   .process .hori{
     display: block;
     width: 100%;
-    transform: translateX(0);
   }
 
   .partners .ver{
@@ -581,11 +569,13 @@ footer span{
   .contact ul{
     flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     margin-bottom: 80px;
   }
 
   .contact ul li{
+    display: flex;
+    align-items: center;
     margin-right: 100px;
     font-size: 1.25rem;
   }
@@ -599,8 +589,8 @@ footer span{
   }
 
   .contact ul li img{
-    width: 70px;
-    height: 70px;
+    width: 32px;
+    height: 32px;
     margin-bottom: 10px;
   }
 
@@ -620,6 +610,11 @@ footer span{
 
   footer .sns ul li a{
     font-size: 2rem;
+  }
+
+  footer .sns ul li a img{
+    width: 32px;
+    height: 32px;
   }
 
   footer .head-wrap{
@@ -670,6 +665,7 @@ footer span{
   footer span{
     order: 3;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
   }
 }
