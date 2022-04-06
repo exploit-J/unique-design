@@ -1,9 +1,15 @@
 /*** Reset ***/
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url(../assets/font/MyriadPro-Regular.otf);
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Nanum Gothic', sans-serif;
+  /* font-family: 'Nanum Gothic', sans-serif; */
+  font-family: 'MyriadPro-Regular', sans-serif ;
 }
 
 ul,

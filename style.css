@@ -574,14 +574,8 @@ footer span{
   }
 
   .contact ul li{
-    display: flex;
-    align-items: center;
     margin-right: 100px;
     font-size: 1.25rem;
-  }
-
-  .contact ul li:first-child{
-    margin-top: 20px;
   }
 
   .contact ul li:last-child{
@@ -591,7 +585,6 @@ footer span{
   .contact ul li img{
     width: 32px;
     height: 32px;
-    margin-bottom: 10px;
   }
 
   footer{
@@ -623,6 +616,7 @@ footer span{
     align-items: center;
     order: 1;
     margin-bottom: 40px;
+    width: 100%;
   }
 
   footer .head-wrap .co-info{
@@ -632,11 +626,6 @@ footer span{
     width: 50%;
     max-width: 500px;
     margin-right: 40px;
-  }
-
-  footer .head-wrap img{
-    width: 50%;
-    max-width: 500px;
   }
 
   footer .head-wrap .address{
@@ -660,6 +649,18 @@ footer span{
 
   footer .head-wrap .contact .desc:first-child dd{
     margin-right: 15px;
+  }
+
+  footer .footimg{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    width: 50%;
+    max-width: 500px;
+  }
+
+  footer .footimg img{
+    width: 100%;
   }
 
   footer span{
