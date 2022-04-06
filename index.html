@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="유니크디자인">
+  <meta property="og:title" content="유니크디자인">
+  <meta property="og:description" content="브랜드디자인, 로고디자인, 로고제작, 브랜드로고, 기업로고, 회사로고, CI, BI, 패키지제작, 편집디자인">
+
   <title>Unique Design</title>
   <script src="https://kit.fontawesome.com/a6829024a8.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,31 +90,36 @@
     </section>
     <section class="overview">
       <h1 class="section-title">Overview</h1>
-      <dl>
-        <div class="list-item">
-          <dd>Since</dd>
-          <dt>2000년 9월 20일</dt>
+      <div class="overview-contents">
+        <div class="overview-img">
+          <img src="assets/images/overview01.png" alt="">
         </div>
-        <div class="list-item">
-          <dd>Address</dd>
-          <dt>충청남도 천안시 서북구 두정역서1길 13, 301호</dt>
-        </div>
-        <div class="list-item">
-          <dd>Tel</dd>
-          <dt>041-551-8037</dt>
-        </div>
-        <div class="list-item">
-          <dd>E-mail</dd>
-          <dt>unique8037@naver.com</dt>
-        </div>
-        <div class="list-item webhard">
-          <dd>Webhard</dd>
-          <dt>
-            <span>ID : </span>uninet |
-            <span>Password : </span>8037
-          </dt>
-        </div>
-      </dl>
+        <dl>
+          <div class="list-item">
+            <dd>Since</dd>
+            <dt>2000년 9월 20일</dt>
+          </div>
+          <div class="list-item">
+            <dd>Address</dd>
+            <dt>충청남도 천안시 서북구 두정역서1길 13, 301호</dt>
+          </div>
+          <div class="list-item">
+            <dd>Tel</dd>
+            <dt>041-551-8037</dt>
+          </div>
+          <div class="list-item">
+            <dd>E-mail</dd>
+            <dt>unique8037@naver.com</dt>
+          </div>
+          <div class="list-item webhard">
+            <dd>Webhard</dd>
+            <dt>
+              <span>ID : </span>uninet |
+              <span>Password : </span>8037
+            </dt>
+          </div>
+        </dl>
+      </div>
     </section>
     <section class="process">
       <h1 class="section-title">Process</h1>
@@ -120,15 +130,16 @@
     </section>
     <section class="partners">
       <h1 class="section-title">Partners</h1>
-      <img src="assets/images/partners-ver.png" alt="">
+      <img class="ver" src="assets/images/partners-ver.png" alt="">
+      <img class="hori" src="assets/images/partners-hori.png" alt="">
     </section>
     <section class="contact">
       <h1 class="section-title">Contact</h1>
       <ul>
-        <li><img src="assets/images/contact-icon-01.png" alt=""><span>충남 천안시 서북구 두정역서 1길 13<br>
+        <li><img src="assets/images/contact-icon-01.svg" alt=""><span>충남 천안시 서북구 두정역서 1길 13<br>
             (들꽃세상 301호)</span></li>
-        <li><img src="assets/images/contact-icon-02.png" alt=""><span>041.551.8037</span></li>
-        <li><img src="assets/images/contact-icon-03.png" alt=""><span>unique8037@naver.com</span></li>
+        <li><img src="assets/images/contact-icon-02.svg" alt=""><span>041.551.8037</span></li>
+        <li><img src="assets/images/contact-icon-03.svg" alt=""><span>unique8037@naver.com</span></li>
       </ul>
       <center class="map">
         <iframe
@@ -140,11 +151,32 @@
   </main>
 
   <footer>
+    <div class="sns">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/pages/category/Printing-Service/%EC%9C%A0%EB%8B%88%ED%81%AC%EB%94%94%EC%9E%90%EC%9D%B8-151303094901211/"
+            title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/unique8037_/" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Blog">
+            <i class="fa-solid fa-question"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="head-wrap">
       <div class="co-info">
-        <div class="address">
-          <p><span>유니크디자인</span> 충남 천안시 서북구 두정역서 1길 13(들꽃세상 301호)</p>
-        </div>
+        <dl class="address">
+          <dt>유니크디자인</dt>
+          <dd>충남 천안시 서북구 두정역서 1길 13(들꽃세상 301호)</dd>
+        </dl>
         <div class="contact">
           <dl>
             <div class="desc">
@@ -158,15 +190,7 @@
           </dl>
         </div>
       </div>
-      <div class="sns">
-        <ul>
-          <li><a
-              href="https://www.facebook.com/pages/category/Printing-Service/%EC%9C%A0%EB%8B%88%ED%81%AC%EB%94%94%EC%9E%90%EC%9D%B8-151303094901211/"><i
-                class="fa-brands fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/unique8037_/"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-question"></i></a></li>
-        </ul>
-      </div>
+
       <img class="footimg" src="assets/images/co-desc-black.svg" alt="">
     </div>
     <span>ⓒ2000 - 2022 UNIQUE. Communication Design Company</span>
