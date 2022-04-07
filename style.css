@@ -229,6 +229,10 @@ section:last-child{
   line-height: 24px;
 }
 
+.about .about-desc p br{
+  display: none;
+} 
+
 .about .about-desc p span{
   font-size: 16px;
   font-weight: 600;
@@ -382,13 +386,6 @@ footer span{
   font-size: 0.7rem;
   letter-spacing: -0.05rem;
   text-align: center;
-}
-
-
-@media screen and (max-width:767px) {
-  .about .about-desc p br{
-    display: none;
-  } 
 }
 
 @media screen and (min-width:768px){
@@ -560,6 +557,10 @@ footer span{
     line-height: 2rem;
     margin-bottom: 50px;
   }
+
+  .about .about-desc p br{
+    display: block;
+  } 
 
   .about .about-desc p span{
     font-size: 1.5rem;
