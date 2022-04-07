@@ -159,11 +159,6 @@ section:last-child{
   margin-right: 20px;
 }
 
-/* 모바일 vh오류 해결 */
-.top{
-  width: 100%;
-}
-
 .top .logo .img{
   position: relative;
   padding: 14rem 0;
