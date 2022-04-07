@@ -95,6 +95,66 @@ section:last-child{
   border-radius: 4px;
 }
 
+.slide{
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slide-show{
+  display: flex;
+  width: 400vw;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.slide-list{
+  width: 100vw;
+  background-color: #ebebeb;
+}
+
+.slide-list img{
+  width: 100%;
+  height: 40vh;
+  object-fit: contain;
+}
+.slide-list,
+.slide-list img{
+  display: block;
+}
+
+.slide .prev{
+  position: absolute;
+  top: 60%;
+  left: 10px;
+  font-size: 1.5rem;
+}
+
+.slide .next{
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+.slide .prev:hover,
+.slide .next:hover{
+  opacity: 0.5;
+}
+
+.slide .controls{
+  display: flex;
+  justify-content: center;
+}
+
+.slide .controls button{
+  font-size: 1rem;
+}
+
+.slide .pause{
+  margin-right: 20px;
+}
+
 .top{
   width: 100%;
   height: 90vh;
@@ -181,7 +241,7 @@ section:last-child{
 .overview dl{
   padding: 5px;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
 }
 
 .overview .list-item{
@@ -459,6 +519,16 @@ footer span{
 
   .top .logo .black{
     display: none;
+  }
+
+  .slide .prev{
+    left: 20%;
+    font-size: 2.5rem;
+  }
+  
+  .slide .next{
+    right: 20%;
+    font-size: 2.5rem;
   }
 
   .about-contents{

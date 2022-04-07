@@ -51,3 +51,40 @@ function underlineEffect(e){
 
 moveButton.forEach(button => button.addEventListener('click', (e) => underlineEffect(e)))
 
+// slide
+
+const slideShow = document.querySelector('.slide-show')
+const slideList = document.querySelectorAll('.slide-list')
+const nextButton = document.querySelector('.slide .next')
+const prevButton = document.querySelector('.slide .prev')
+let currentSlide = 0
+const pauseButton = document.querySelector('.pause')
+const playButton = document.querySelector('.play')
+let autoPlay = setInterval(next, 3500); // 함수 자동실행
+
+pauseButton.addEventListener('click', () => clearInterval(autoPlay))
+playButton.addEventListener('click', () => autoPlay = setInterval(next, 3500))
+
+function next(){
+  slideShow.style.transform = `translateX(${-100 * (currentSlide + 1)}vw)`
+  currentSlide ++
+  if(currentSlide == slideList.length){
+    slideShow.style.transform = `translateX(0)`
+    currentSlide = -1
+    next()
+  }
+  // console.log(currentSlide);
+}
+
+function prev(){
+  slideShow.style.transform = `translateX(${-100 * (currentSlide - 1)}vw)`
+  currentSlide --
+  if(currentSlide<0){
+    currentSlide = slideList.length
+    prev()
+  }
+  // console.log(currentSlide);
+}
+
+nextButton.addEventListener('click', next)
+prevButton.addEventListener('click', prev)
