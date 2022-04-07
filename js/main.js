@@ -87,3 +87,12 @@ function prev(){
 
 nextButton.addEventListener('click', next)
 prevButton.addEventListener('click', prev)
+
+// 모바일 vh오류 해결
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01
+  document.documentElement.style.setProperty('--vh', `${vh}px`)
+})
