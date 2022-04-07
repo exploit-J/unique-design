@@ -161,15 +161,12 @@ section:last-child{
 
 /* 모바일 vh오류 해결 */
 .top{
-  /* width: 100%; */
-  /* height: 90vh; */
-  height: calc(var(--vh, 1vh) * 90);
+  width: 100%;
 }
 
-.top .logo{
+.top .logo .img{
   position: relative;
-  /* width: 100%; */
-  height: 100%;
+  padding: 14rem 0;
   display: flex;
   justify-content: center;
   background-image: url(assets/images/index/bg-gray.png);
@@ -510,7 +507,14 @@ footer span{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     background-image: url(assets/images/index/bg-blue.png);
+  }
+
+  .top .logo .img{
+    background: none;
+    width: 100%;
   }
 
   .top .logo img{
