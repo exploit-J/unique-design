@@ -2,8 +2,9 @@
 
 const sideMenuButton = document.querySelector('.side-menu-button')
 const sideMenu = document.querySelector('nav')
-const homeButton = document.querySelector('header .logo')
+const homeButton = document.querySelector('.to-top button')
 const listItem = document.querySelectorAll('header nav li')
+
 sideMenuButton.addEventListener('click', () =>
   sideMenu.classList.toggle('is-active'))
 
@@ -24,3 +25,16 @@ function underlineEffect(e){
 }
 
 listItem.forEach(item => item.addEventListener('click', (e) => underlineEffect(e)))
+
+
+function checkScroll(){
+  let currentScroll = window.scrollY
+  if(currentScroll > 1000){
+    homeButton.classList.add('is-active')
+  }else{
+    homeButton.classList.remove('is-active')
+  }
+  console.log(currentScroll);
+}
+
+window.addEventListener('scroll', checkScroll);

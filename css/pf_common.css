@@ -81,8 +81,12 @@ header .side-menu-button button{
   font-size: 1.2rem;
 }
 
+main{
+  padding: 0 10px;
+}
+
 footer{
-  width: 100vw;
+  width: 100%;
   padding: 30px 10px;
   background-color: #ebebeb;
 }
@@ -162,6 +166,32 @@ footer span{
   font-size: 0.7rem;
   letter-spacing: -0.05rem;
   text-align: center;
+}
+
+.to-top button{
+  position: fixed;
+  bottom: 2vh;
+  right: 2vh;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgb(83, 83, 83);
+  background-color: #ebebeb;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: 0.2s;
+  transform: translateY(300px);
+}
+
+.to-top button.is-active{
+  transform: translateY(0);
+}
+
+.to-top button:hover{
+  font-size: 1.8rem;
+}
+
+.to-top button i{
+  transform: translateY(2px);
 }
 
 
