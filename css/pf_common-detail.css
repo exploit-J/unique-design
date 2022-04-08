@@ -1,0 +1,114 @@
+@import url(./pf_common.css);
+main{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+main .detail-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+main .detail-content .item{
+  margin-bottom: 5rem;
+}
+
+main .detail-content .logo{
+  width: 50%;
+}
+
+main .detail-content .item:last-child{
+  margin-bottom: 0;
+}
+
+main .detail-content img{
+  width: 100%;
+}
+
+main .detail-content .desc{
+  width: 100%;
+}
+
+main .detail-content .title{
+  font-size: 1.1rem;
+}
+
+main .detail-content .title-desc{
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+main .detail-control{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+main .detail-control i{
+  font-size: 1rem;
+}
+
+main .detail-control span{
+  font-size: 0.8rem;
+}
+
+/* editorial 전용 */
+main .item.ed-desc{
+  width: 100%;
+  padding-top: 2rem;
+}
+
+
+@media screen and (min-width:768px){
+
+  main .detail-content .item{
+    margin-bottom: 12.5rem;
+  }
+
+  main .detail-content .title{
+    font-size: 1.5rem;
+  }
+  
+  main .detail-content .title-desc{
+    font-size: 1.1rem;
+  }
+
+  main .desktop{
+    width: 50%;
+  }
+
+  main .detail-content .logo{
+    width: 30%;
+  }
+
+  main .detail-control i{
+    font-size: 1.5rem;
+  }
+  
+  main .detail-control span{
+    font-size: 1.3rem;
+  }
+
+  main .detail-control{
+    width: 50%;
+  }
+
+  main .item.ed-desc{
+    padding-top: 5rem;
+  }
+
+  main .ed-top{
+    width: 90%;
+  }
+
+  main .ed-bottom{
+    width: 60%;
+  }
+}

@@ -1,13 +1,5 @@
 @import url(./reset.css);
 
-header img{
-  transition: 0.5s;
-}
-
-header img:hover{
-  opacity: 0.5;
-}
-
 header{
   position: relative;
   height: 50px;
@@ -25,6 +17,7 @@ header .head-wrapper{
   padding: 0 12px;
   background-color: #fff;
   border-bottom: 1px solid #ebebeb;
+  z-index: 1;
 }
 
 header .logo{
@@ -38,6 +31,11 @@ header .logo a{
 
 header .logo a img{
   width: 80px;
+  transition: 0.5s;
+}
+
+header .logo a img:hover{
+  opacity: 0.5;
 }
 
 header nav{
@@ -190,7 +188,7 @@ footer span{
   background-color: rgb(250, 250, 111);
   border-radius: 50%;
   font-size: 1.5rem;
-  transition: 0.2s;
+  transition: 0.5s;
   transform: translateY(300px);
 }
 
@@ -226,6 +224,10 @@ main ul li{
   text-align: center;
 }
 
+main ul li a .desktop{
+  display: none;
+}
+
 main ul li img{
   width: 100%;
 }
@@ -247,6 +249,7 @@ main ul li img{
 
   header .logo a img{
     width: 120px;
+    transition: 0.5s;
   }
 
   header nav{
@@ -306,6 +309,78 @@ main ul li img{
     display: none;
   }
 
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .many li{
+    width: calc(100%/5);
+  }
+
+  main .few li{
+    width: calc(100%/3);
+  }
+
+  main ul{
+    width: 80%;
+  }
+
+  main ul li{
+    width: calc(100%/5);
+    margin-bottom: 0;
+  }
+
+  main ul li a .img-contents{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  main ul li a .img-contents img{
+    transition: 0.5s;
+  }
+
+  main ul li a .desktop{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  main ul li a .img-contents:hover .desktop{
+    visibility: visible;
+    background-color: #999999;
+    opacity: 0.9;
+  }
+
+  main ul li a .img-contents:hover img{
+    transform: scale(1.1);
+  }
+
+  main ul li .mobile{
+    display: none;
+  }
+
+  main ul li .desktop p{
+    font-size: 1.8rem;    
+  }
+
+  main ul li .desktop span{
+    font-size: 1rem;
+  }
+
   footer{
     display: flex;
     flex-direction: column;
@@ -351,19 +426,24 @@ main ul li img{
     display: flex;
     margin-bottom: 5px;
   }
+  
+    footer .head-wrap dt{
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
 
   footer .head-wrap .address dt{
     font-weight: bold;
-  }
-
-  footer .head-wrap dt{
-    margin-right: 10px;
-    font-size: 1.1rem;
+    min-width: 106px;
   }
 
   footer .head-wrap .contact dl{
     display: flex;
     flex-direction: row;
+  }
+
+  footer .head-wrap .contact .desc:last-child dt{
+    min-width: 50px;
   }
 
   footer .head-wrap .contact .desc:first-child dd{

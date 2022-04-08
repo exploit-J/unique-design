@@ -29,7 +29,7 @@ listItem.forEach(item => item.addEventListener('click', (e) => underlineEffect(e
 
 function checkScroll(){
   let currentScroll = window.scrollY
-  if(currentScroll > 1000){
+  if(currentScroll > 500){
     homeButton.classList.add('is-active')
   }else{
     homeButton.classList.remove('is-active')
