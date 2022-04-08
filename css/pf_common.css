@@ -84,6 +84,9 @@ header nav li a:hover{
 }
 
 header .side-menu-button{
+  display: flex;
+  justify-content: center;
+  width: 20px;
   transition: 0.5s;
 }
 
@@ -92,6 +95,8 @@ header .side-menu-button:hover{
 }
 
 header .side-menu-button button{
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
 }
 
@@ -467,4 +472,22 @@ main ul li img{
     text-align: center;
     font-size: 0.8rem;
   }
+}
+
+/* nav, portfolio 시안 없는것들 line-through처리 */
+
+header nav li:nth-child(4),
+header nav li:nth-child(5),
+header nav li:nth-child(6){
+  text-decoration: line-through;
+}
+
+main ul .desktop,
+main ul .mobile{
+  text-decoration: line-through;
+}
+
+main ul li:first-child .desktop,
+main ul li:first-child .mobile{
+  text-decoration: none;
 }
