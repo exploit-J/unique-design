@@ -1,8 +1,16 @@
 @import url(./reset.css);
 
+header img{
+  transition: 0.5s;
+}
+
+header img:hover{
+  opacity: 0.5;
+}
+
 header{
   position: relative;
-  height: 80px;
+  height: 50px;
 }
 
 header .head-wrapper{
@@ -13,29 +21,30 @@ header .head-wrapper{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 50px;
+  padding: 0 12px;
   background-color: #fff;
   border-bottom: 1px solid #ebebeb;
 }
 
 header .logo{
-  width: 40%;
   max-width: 220px;
-  margin-left: 10px;
 }
 
 header .logo a{
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 header .logo a img{
-  display: block;
+  width: 80px;
 }
 
 header nav{
   position: absolute;
-  top: 80px;
+  top: 50px;
   width: 100%;
+  margin-left: -12px;
   transform: translateY(-600px);
   background-color: #fff;
   border-bottom: 1px solid #ebebeb;
@@ -55,12 +64,20 @@ header nav ul{
 }
 
 header nav li{
+  display: flex;
+  align-items: center;
   width: 100%;
   text-align: center;
 }
+
+header nav li:nth-child(4){
+  flex-shrink: 0;
+}
+
 header nav li a{
-  display: block;
-  padding: 6px;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
   transition: 0.5s;
 }
 
@@ -69,7 +86,6 @@ header nav li a:hover{
 }
 
 header .side-menu-button{
-  margin-right: 10px;
   transition: 0.5s;
 }
 
@@ -79,10 +95,6 @@ header .side-menu-button:hover{
 
 header .side-menu-button button{
   font-size: 1.2rem;
-}
-
-main{
-  padding: 0 10px;
 }
 
 footer{
@@ -175,7 +187,7 @@ footer span{
   width: 2rem;
   height: 2rem;
   border: 1px solid rgb(83, 83, 83);
-  background-color: #ebebeb;
+  background-color: rgb(250, 250, 111);
   border-radius: 50%;
   font-size: 1.5rem;
   transition: 0.2s;
@@ -196,18 +208,45 @@ footer span{
 
 
 
+/*** main ***/
+
+main{
+  padding: 0 10px;
+}
+
+main ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main ul li{
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main ul li img{
+  width: 100%;
+}
+
+
+
 @media screen and (min-width:768px){
   header{
-    height: 120px;
     justify-content: space-between;
   }
 
   header .head-wrapper{
-    height: 120px;
+    padding: 0 5rem;
   }
 
   header .logo{
     max-width: 300px;
+  }
+
+  header .logo a img{
+    width: 120px;
   }
 
   header nav{
